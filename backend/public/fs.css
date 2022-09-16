@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* background-color: red; */
+}
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    background: url('social.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    position: absolute;
+   
+}
+#contact-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+#contact-box form{
+
+width: 35%;
+}
+#contact-box form{
+font-size: 1.3rem;
+}
+#contact-box 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+#contact-box input{
+    
+    padding: 0.6rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+#email,#name,#phone,#password{
+    width:100%
+}
+.gen{
+    width: 10%;
+}
+.btn{
+    padding: 6px 20px;
+    border: none;
+    background-color: rgb(88, 81, 81);
+    color: white;
+    margin: 25px 2px;
+    font-size: 1rem;
+    border-radius: 40px;
+    cursor: pointer;
+
+}

@@ -1,0 +1,71 @@
+doctype html
+html(lang="en", dir="ltr")
+	head
+		meta(charset="utf-8")
+		title Login and Registration Form in HTML | CodingNepal
+		link(rel="stylesheet", href="logi.css")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+	body
+		.wrapper
+			.title-text
+				.title.login
+					| 
+					| Login Form
+				.title.signup
+					| 
+					| Signup Form
+			.form-container
+				.slide-controls
+					input#login(type="radio", name="slide", checked)
+					input#signup(type="radio", name="slide")
+					label.slide.login(for="login") Login
+					label.slide.signup(for="signup") Signup
+					.slider-tab
+				.form-inner
+					form.login(action="/login",method="post")
+						.field
+							input(type="email",name="email", placeholder="Email Address", required)
+						.field
+							input(type="password", name="password",placeholder="Password", required)
+						.pass-link
+							a(href="#") Forgot password?
+						.field.btn
+							.btn-layer
+							input(type="submit", value="Login", onclick="myFunction()")
+						.signup-link
+							| 
+							| Not a member?
+							a(href="") Signup now
+					form.signup(action="/register",method="post")
+						.field
+							input(type="text",name="name",placeholder="Name",required)
+						.field
+							input(type="email",name="email" placeholder="Email Address", required)
+						.field
+							input(type="password",name="password", placeholder="Password", required)
+						.field
+							input(type="password",name="cpassword" placeholder="Confirm password", required)
+						.field.btn
+							.btn-layer
+							input(type="submit", value="Signup")
+		script.
+			const loginText = document.querySelector(".title-text .login");
+			const loginForm = document.querySelector("form.login");
+			const loginBtn = document.querySelector("label.login");
+			const signupBtn = document.querySelector("label.signup");
+			const signupLink = document.querySelector("form .signup-link a");
+			signupBtn.onclick = (()=>{
+			loginForm.style.marginLeft = "-50%";
+			loginText.style.marginLeft = "-50%";
+			
+			});
+			loginBtn.onclick = (()=>{
+			loginForm.style.marginLeft = "0%";
+			loginText.style.marginLeft = "0%";
+			
+			});
+			signupLink.onclick = (()=>{
+			signupBtn.click();
+			
+			return false;
+			});

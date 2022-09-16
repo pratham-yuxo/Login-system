@@ -1,0 +1,37 @@
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title Document
+		link(rel="stylesheet", href='fs.css')
+	body
+		section#contact
+			a(href="login") Login
+			h1.primary-center register to our website
+			#contact-box
+				form(action="/register",method='post') 
+					.form-group
+						label.name(for="email") E-mail:
+						input#email(type="email", name="email", placeholder="Enter your E-mail")
+					.form-group 
+						label.name(for="name") Name  
+						input#name(type="text",name="name",placeholder="Enter your name")
+					.form-group
+						label.name(for="rollno") Roll No.:
+						input#phone(type="Roll", name="rollno", placeholder="Enter your Roll number")
+					.form-group
+						label.name(for="phone") Phone No.:
+						input#phone(type="phone",minlength="10",maxlength="10", name="phone", placeholder="Enter your Phone number")
+					.form-group
+						label.name(for="gender") Gender :
+						.select
+						td male
+						input.gen(type="radio",name="gender",value="male")
+						label female
+						input.gen(type="radio",name="gender",value="female")
+					.form-group
+						label.name(for="password") Password:
+						input#password(type="password", name="password", placeholder="Enter your Password")
+					button.btn  Submit
