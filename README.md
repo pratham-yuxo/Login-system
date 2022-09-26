@@ -9,3 +9,4 @@ Technology used:
   6.Mongoose (to connect nodejs with mongodb)
   7.PUG
   
+Run app.js at port 80
